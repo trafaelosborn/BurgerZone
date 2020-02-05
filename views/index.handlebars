@@ -1,0 +1,45 @@
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="not-eaten">
+
+                <h3 class="div-head">Not Eaten</h3>
+                  {{#each burgers}}
+                      {{#unless devoured}}
+                      <div class="list">
+                          <h2 class="name"><span>{{burger}}</span></h2>
+                          <button>Devour</button>
+                          </div>
+                     {{/unless}}
+                  {{/each}}
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="new-burger">
+        <input type="text" id="input" class="input" placeholder="Add a burger!">
+        <br>
+        <button id="add-burger">I want it</button>
+    </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="eaten">
+
+                <h2 class="div-head">Eaten</h2>
+                {{#each burgers}}
+                    {{#if devoured}}
+                    <h3 class="name"><span>{{burger}}</span></h3>
+                    {{/if}}
+                {{/each}}
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+</div>
